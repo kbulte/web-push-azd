@@ -1,10 +1,6 @@
 {
     "resourcesResourceGroups": "rg-",
-    "keyVaultVaults": "kv-",
-    "cdnProfiles": "cdnp-",
-    "cdnProfilesEndpoints": "cdne-",
-    "storageStorageAccounts": "st",
+    "keyVaultVaults": "kv-",Ò
     "webServerFarms": "plan-",
-    "webSitesAppService": "app-",
-    "webStaticSites": "stapp-"
+    "webSitesAppService": "app-"
 }

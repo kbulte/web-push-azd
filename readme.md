@@ -3,7 +3,7 @@ Application and infrastructure code to showcase web push notifications as descri
 
 ## Note
 ### azure.yaml
-- There is no host property in services specific for Azure CDN + storage account. Will set static web app for now.
+- There is no host property in services specific for Azure CDN + storage account. Will use appservices on free tier for now.
 https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-schema
 
 ### docker logs
@@ -14,6 +14,7 @@ https://www.w3.org/TR/push-api/#:~:text=The%20push%20endpoint%20of%20a,encrypt%2
 
 
 ## TODO
+- Create a schema
 - Check with what these schema's are made https://github.com/Azure-Samples/todo-csharp-cosmos-sql/blob/main/OPTIONAL_FEATURES.md
 
 ## Issues
