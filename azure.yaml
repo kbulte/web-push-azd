@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+# more info about the azure.yaml schema -> https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-schema
+
+name: web-push
+metadata:
+  template: webpush-bicep@0.0.1-beta
+services:
+  backend:
+    project: ./src/backend
+    language: csharp
+    host: appservice
+  frontend:
+    project: ./src/frontend
+    dist: build
+    language: js
+    host: appservice
+infra:
+  provider: bicep

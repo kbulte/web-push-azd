@@ -1,0 +1,10 @@
+{
+    "resourcesResourceGroups": "rg-",
+    "keyVaultVaults": "kv-",
+    "cdnProfiles": "cdnp-",
+    "cdnProfilesEndpoints": "cdne-",
+    "storageStorageAccounts": "st",
+    "webServerFarms": "plan-",
+    "webSitesAppService": "app-",
+    "webStaticSites": "stapp-"
+}

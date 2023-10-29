@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <!-- Runtime environment variables -->
+    <script src="%PUBLIC_URL%/env-config.js"></script>    
+  </head>
+  <body>
+    <!--div id="root"></div-->
+    <button onclick="subscribe()">Subscribe</button>
+
+    <script>
+      async function subscribe() {
+        let sw = await navigator.serviceWorker.ready;
+        let pushSubscription = await sw.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: ENV_CONFIG.REACT_APP_VAP_ID_PUBLIC_KEY
+        });
+        console.log(JSON.stringify(pushSubscription));
+        
+        fetch(ENV_CONFIG.REACT_APP_API_BASE_URL + "/push-subscriptions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(pushSubscription)
+        })
+      }
+
+      if ('serviceWorker' in navigator) {
+        addEventListener('load', async () => {
+          let sw = await navigator.serviceWorker.register('./sw.js');
+          console.log(sw);
+        });
+      }
+    </script>
+  </body>
+</html>
