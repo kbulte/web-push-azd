@@ -1,6 +1,6 @@
 {
     "resourcesResourceGroups": "rg-",
-    "keyVaultVaults": "kv-",Ò
+    "keyVaultVaults": "kv-",
     "webServerFarms": "plan-",
     "webSitesAppService": "app-"
 }
