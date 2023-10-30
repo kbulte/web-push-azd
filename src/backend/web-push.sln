@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32B6ACE4-5D9F-4D81-83F8-4F3F44C3401B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webpush.backend", "src\backend\webpush.backend.csproj", "{79A3269E-49C1-46FD-BB17-C6C08BEC8557}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webpush.backend", "webpush.backend.csproj", "{79A3269E-49C1-46FD-BB17-C6C08BEC8557}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
